@@ -1,3 +1,2 @@
 # Simply-ReUse
 
-Hello

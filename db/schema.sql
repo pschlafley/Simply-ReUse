@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS recycle_db;
+
+CREATE DATABASE recycle_db;
