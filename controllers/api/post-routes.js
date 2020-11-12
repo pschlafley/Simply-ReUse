@@ -8,6 +8,18 @@ router.get('/', (req, res) => {
             {
                 model: User,
                 attributes: ['id', 'username']
+            },
+            {
+                model: Comment,
+                attributes: {
+                    exclude: ['updatedAt', 'user_id', 'post_id']
+                },
+                include: [
+                    {
+                        model: User, 
+                        attributes: ['id','username']
+                    }
+                ]
             }
         ]
     })
@@ -27,6 +39,18 @@ router.get('/:id', (req, res) => {
             {
                 model: User,
                 attributes: ['id', 'username']
+            },
+            {
+                model: Comment,
+                attributes: {
+                    exclude: ['updatedAt', 'user_id', 'post_id']
+                },
+                include: [
+                    {
+                        model: User, 
+                        attributes: ['id','username']
+                    }
+                ]
             }
         ],
         attributes: {exclude: ['updatedAt', 'user_id']},
