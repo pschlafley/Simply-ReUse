@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
             res.status(404).json({ message: 'No Posts found with that id' });
             return;
         }
-        res.json(dbUserData)
+        res.json(dbPostData)
     })
     .catch(err => {
         console.log(err);
