@@ -3,7 +3,13 @@ const { User, Post, Like, Comment } = require('../../models');
 
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: {exclude: ['updatedAt']}
+        attributes: {exclude: ['user_id', 'updatedAt']},
+        include: [
+            {
+                model: User,
+                attributes: ['id', 'username']
+            }
+        ]
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -16,14 +22,21 @@ router.get('/:id', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
-        }
+        },
+        include: [
+            {
+                model: User,
+                attributes: ['id', 'username']
+            }
+        ],
+        attributes: {exclude: ['updatedAt', 'user_id']},
     })
     .then(dbPostData => {
         if(!dbPostData){
             res.status(404).json({ message: 'No Posts found with that id' });
             return;
         }
-        res.json(dbUserData)
+        res.json(dbPostData)
     })
     .catch(err => {
         console.log(err);
