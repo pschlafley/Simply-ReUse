@@ -1,13 +1,30 @@
 const router = require('express').Router();
 const { User, Post, Like, Comment } = require('../../models');
+const sequelize = require('../../config/connection');
 
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: {exclude: ['user_id', 'updatedAt']},
+        order: [['created_at', 'DESC']],
+        attributes: [
+            'id',
+            'content',
+            'post_url',
+            'created_at'
+        ],
         include: [
             {
                 model: User,
-                attributes: ['id', 'username']
+                attributes: ['id', 'username'],
+            },
+            {
+                model: Like,
+                attributes: ['id', 'user_id', 'post_id'],
+                include: [
+                    {
+                        model: User, 
+                        attributes: ['username']
+                    }
+                ]
             },
             {
                 model: Comment,
@@ -35,10 +52,26 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
+        attributes: [
+            'id',
+            'content',
+            'post_url',
+            'created_at',
+        ],
         include: [
             {
                 model: User,
                 attributes: ['id', 'username']
+            },
+            {
+                model: Like,
+                attributes: ['id', 'user_id', 'post_id'],
+                include: [
+                    {
+                        model: User, 
+                        attributes: ['username']
+                    }
+                ]
             },
             {
                 model: Comment,
@@ -81,6 +114,7 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     })
 });
+
 
 router.put('/:id', (req, res) => {
     Post.update(req.body, {
