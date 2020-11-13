@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Post, Like, Comment } = require('../../models');
-
 router.get('/', (req, res) => {
     Like.findAll({})
     .then(dbLikeData => res.json(dbLikeData))
@@ -9,7 +8,6 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     })
 });
-
 router.get('/:id', (req, res) => {
     Like.findOne({
         where: {
@@ -28,7 +26,6 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     })
 }); 
-
 router.post('/', (req, res) => {
     Like.create({
         user_id: req.body.user_id,
@@ -40,7 +37,6 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     })
 });
-
 router.delete('/:id', (req, res) => {
     Like.destroy({
         where: {
@@ -59,5 +55,4 @@ router.delete('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
-
 module.exports = router;
