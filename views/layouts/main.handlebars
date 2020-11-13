@@ -13,22 +13,21 @@
 <body>
   <header>
         <a href="/" style="text-decoration: none;"><h2>Simply ReUse</h2></a>
+        <!-- div element to create and close the sidenav -->
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="/about">About</a>
-          <a href="/blog">Blog</a>
-          <a href="/recycle">Recycle</a>
-          {{#if loggedIn}}
-          <a href="/dashboard">Dashboard</a>
-          <a href="/logout">Logout</a>
-          {{else}}
-            <!-- should logout be a button? 
-            <button id="logout" class="btn-no-style">Logout</button> -->
-          <a href="/contact">Login</a>
-          {{/if}}
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/recycle">Recycle</a>
+            {{#if loggedIn}}
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
         </div>
         
-        <!-- element to open the sidenav -->
+        <!-- span element to open the sidenav -->
         <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">Menu &nbsp;<i class="fas fa-chevron-circle-down"></i></span>
     </header>
     <main>
