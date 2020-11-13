@@ -1,13 +1,29 @@
 const router = require('express').Router();
 const { User, Post, Like, Comment } = require('../../models');
-
+const sequelize = require('../../config/connection');
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: {exclude: ['user_id', 'updatedAt']},
+        order: [['created_at', 'DESC']],
+        attributes: [
+            'id',
+            'content',
+            'post_url',
+            'created_at'
+        ],
         include: [
             {
                 model: User,
-                attributes: ['id', 'username']
+                attributes: ['id', 'username'],
+            },
+            {
+                model: Like,
+                attributes: ['id', 'user_id', 'post_id'],
+                include: [
+                    {
+                        model: User, 
+                        attributes: ['username']
+                    }
+                ]
             },
             {
                 model: Comment,
@@ -29,16 +45,31 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     })
 }); 
-
 router.get('/:id', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
         },
+        attributes: [
+            'id',
+            'content',
+            'post_url',
+            'created_at',
+        ],
         include: [
             {
                 model: User,
                 attributes: ['id', 'username']
+            },
+            {
+                model: Like,
+                attributes: ['id', 'user_id', 'post_id'],
+                include: [
+                    {
+                        model: User, 
+                        attributes: ['username']
+                    }
+                ]
             },
             {
                 model: Comment,
@@ -67,7 +98,6 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     })
 });
-
 router.post('/', (req, res) => {
     Post.create({
         title: req.body.title,
@@ -81,7 +111,6 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     })
 });
-
 router.put('/:id', (req, res) => {
     Post.update(req.body, {
         where: {
@@ -94,7 +123,6 @@ router.put('/:id', (req, res) => {
         res.status(500).json(err);
     })
 });
-
 router.delete('/:id', (req, res) => {
     Post.destroy({
         where: {
@@ -113,5 +141,4 @@ router.delete('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
-
 module.exports = router;
