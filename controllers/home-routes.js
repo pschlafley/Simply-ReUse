@@ -12,14 +12,14 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-  
+
   res.render('login');
 });
 
 // route to render signup page
 router.get('/signup', (req, res) => {
-    res.render('signup');
-    return;
+  res.render('signup');
+  return;
 });
 
 module.exports = router;
