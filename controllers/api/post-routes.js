@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Like, Comment } = require('../../models');
+const sequelize = require('../../config/connection');
+const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
     Post.findAll({
@@ -113,8 +115,7 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     })
 });
-
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(req.body, {
         where: {
             id: req.params.id
@@ -126,8 +127,7 @@ router.put('/:id', (req, res) => {
         res.status(500).json(err);
     })
 });
-
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
             id: req.params.id
