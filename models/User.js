@@ -9,7 +9,6 @@ class User extends Model {
     }
 }
 
-
 User.init (
     {
         id: {
@@ -20,7 +19,7 @@ User.init (
         },
         username: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         email: {
             type: DataTypes.STRING,
