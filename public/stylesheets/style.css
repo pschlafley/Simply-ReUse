@@ -51,7 +51,6 @@ footer h5 {
 
 .hero-image {
     height: 50%;
-    width: 100%;
     background-position: center;
     background-size: cover; 
 }
@@ -123,12 +122,12 @@ footer h5 {
 }
 /* SIDE NAV END */
 
-/* LOGIN STYLES */
+/* LOGIN AND SIGNUP STYLES */
 
 .btn-login, .btn-signup {
     border: none;
     padding: 10px 10px;
-    margin: 10px;
+    margin: 10px auto auto 35px;
     background-color: black;
     border-radius: 15px;
     cursor: pointer;
@@ -136,10 +135,29 @@ footer h5 {
 }
 
 #user-login, #password-login, #username-signup, #email-signup, #password-signup {
-    margin-left: 15px;
+    margin-left: 35px;
 }
 
-/* LOGIN STYLES END */
+.login-title, .signup-title {
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+/* LOGIN AND SIGNUP STYLES END */
+
+
+/* BLOG PAGE */
+
+
+/* RECYCLE PAGE */
+
+
+/* ABOUT PAGE */
+.about-title {
+    font-size: 20px;
+    text-align: center;
+}
+
 
 /* SIDE NAV MEDIA QUERY */
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

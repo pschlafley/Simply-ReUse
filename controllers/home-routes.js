@@ -22,4 +22,16 @@ router.get('/signup', (req, res) => {
   return;
 });
 
+// route to render about page
+router.get('/about', (req, res) => {
+  res.render('about');
+  return;
+});
+
+// route to render blog page
+router.get('/blog', (req, res) => {
+  res.render('blog');
+  return;
+});
+
 module.exports = router;
