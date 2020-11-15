@@ -34,4 +34,10 @@ router.get('/blog', (req, res) => {
   return;
 });
 
+// route to render recycle page
+router.get('/recycle', (req, res) => {
+  res.render('recycle');
+  return;
+});
+
 module.exports = router;
