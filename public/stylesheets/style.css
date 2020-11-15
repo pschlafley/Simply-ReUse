@@ -71,14 +71,27 @@ footer h5 {
     cursor: pointer;
 }
 
-.opening-text button a {
+.opening-text button a, .blog-posts button a{
     color: white;
     text-decoration: none;
 }
 
-.opening-text button:hover {
+.opening-text button:hover, .blog-posts button:hover {
     background-color: #5ac697;
     color: black;
+}
+
+.blog-posts {
+    margin-left:auto; margin-right: 25px;
+}
+
+.blog-posts button {
+    border: none;
+    margin: 10px;
+    padding: 15px 20px;
+    background-color: black;
+    border-radius: 15px;
+    cursor: pointer; 
 }
 
 /* SIDE NAV STYLE*/
@@ -147,6 +160,28 @@ footer h5 {
     font-size: 25px;
 }
 
+.blog-hometitle {
+    background-color: #5ac697; 
+    text-align: center;
+    font-size: 25px;
+}
+
+.recycle101, .recycle101 li{
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.recycle-source {
+    margin-top: 35px;
+    border-top: 2px solid lightgrey;
+    width: 50%;
+    font-size: 14px;
+}
+
+.recycle-source a {
+    color: black;
+}
+
 /* SIDE NAV MEDIA QUERY */
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -157,11 +192,6 @@ footer h5 {
 .card {
     margin: 15px 30px;
 }
-
-
-
-
-
 
 
 /* LEFT IN AS PLACEHOLDER */
