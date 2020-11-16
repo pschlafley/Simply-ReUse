@@ -47,6 +47,7 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     })
 }); 
+
 router.get('/:id', (req, res) => {
     Post.findOne({
         where: {
@@ -100,6 +101,7 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     })
 });
+
 router.post('/', (req, res) => {
     Post.create({
         title: req.body.title,
@@ -113,6 +115,7 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     })
 });
+
 router.put('/:id', withAuth, (req, res) => {
     Post.update(req.body, {
         where: {
@@ -125,6 +128,7 @@ router.put('/:id', withAuth, (req, res) => {
         res.status(500).json(err);
     })
 });
+
 router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
@@ -143,4 +147,5 @@ router.delete('/:id', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
+
 module.exports = router;
