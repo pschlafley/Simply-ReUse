@@ -23,20 +23,23 @@ router.get('/signup', (req, res) => {
 
 // route to render about page
 router.get('/about', (req, res) => {
-  res.render('about');
-  return;
+  res.render('about', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 // route to render blog page
 router.get('/blog', (req, res) => {
-  res.render('blog');
-  return;
+  res.render('blog', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 // route to render recycle page
 router.get('/recycle', (req, res) => {
-  res.render('recycle');
-  return;
+  res.render('recycle', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 // route to render dashboard page
