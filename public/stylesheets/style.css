@@ -50,11 +50,10 @@ footer h5 {
     margin-bottom: 80px;
 }
 
-.hero-image {
-    height: 50%;
-    background-position: center;
-    background-size: cover; 
-}
+/* .hero-image {
+    /* background-position: center; */
+    /* background-size: cover;  */
+/* } */
 
 .opening-text {
     text-align: center;
@@ -82,7 +81,7 @@ footer h5 {
 }
 
 .blog-posts {
-    margin-left:auto; margin-right: 25px;
+    margin-left: auto; margin-right: 25px;
 }
 
 .blog-posts button {
@@ -127,6 +126,25 @@ footer h5 {
     font-size: 36px;
     margin-left: 50px;
 }
+
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 8px 8px 8px 32px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-left: 1.5px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.btn-no-style:hover {
+    background: none;
+    color: white;
+}
+
 /* SIDE NAV END */
 
 /* LOGIN AND SIGNUP STYLES */

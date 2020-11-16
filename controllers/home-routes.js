@@ -3,7 +3,6 @@ const router = require('express').Router();
 // route to render the homepage
 router.get('/', (req, res) => {
   // ===== Need to pass a single post object into the homepage template
-  // check module 14.1.6 to seed data
   res.render('homepage', {
     loggedIn: req.session.loggedIn
   })
@@ -15,8 +14,6 @@ router.get('/login', (req, res) => {
     loggedIn: req.session.loggedIn
   });
 });
-
-// 14.2.6 FIX LOGOUT
 
 // route to render signup page
 router.get('/signup', (req, res) => {
