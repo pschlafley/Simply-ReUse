@@ -3,16 +3,16 @@ const router = require('express').Router();
 // route to render the homepage
 router.get('/', (req, res) => {
   // ===== Need to pass a single post object into the homepage template
+  // check module 14.1.6 to seed data
   res.render('homepage');
 });
 
 // route to render the login page
 router.get('/login', (req, res) => {
-  if (req.body.loggedIn) {
+  if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
 

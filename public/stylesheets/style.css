@@ -141,7 +141,7 @@ footer h5 {
     color: white;
 }
 
-#user-login, #password-login, #username-signup, #email-signup, #password-signup {
+#userlog, #pwlog, #usersign, #emailsign, #pwsign {
     margin-left: 35px;
 }
 
