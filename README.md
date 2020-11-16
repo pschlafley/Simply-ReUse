@@ -26,6 +26,7 @@ npm i
 Team: Brian Spiewak, Lucianne Vazquez, Peyton Schlafley 
 References/Resources: 
 Module 13: Object Relational Mapping (ORM) Module 14 Model-View-Controller (MVC) NPM connect session sequelize, https://www.npmjs.com/package/connect-session-sequelize sequelize Model Basics, https://sequelize.org/master/manual/model-basics.html sequelize basics, https://sequelize.org/v5/manual/querying.html#basics sequelize getting started, https://sequelize.org/v5/manual/getting-started.html sequelize doc's, https://www.npmjs.com/package/sequelize NPM Express, https://www.npmjs.com/package/express-session NPM bcrypt, https://www.npmjs.com/package/bcrypt dotenv , https://www.npmjs.com/package/dotenv SQL DEFAULT Constraint, W3Schools, https://www.w3schools.com/sql/sql_default.asp npm inquirer package, https://www.npmjs.com/package/inquirer mySQL2, https://www.npmjs.com/package/mysql2 NPM express-handlebars, https://www.npmjs.com/package/express-handlebars Node.js mySQL Where, https://www.w3schools.com/nodejs/nodejs_mysql_where.asp timeout, https://stackoverflow.com/questions/57120577/how-to-set-query-timeout-in-sequelize & https://stackoverflow.com/questions/50094169/redirect-to-login-page-after-session-timeout-using-nodejs-expressjs-and-reactjs
+NPM Fuzzy search, https://www.npmjs.com/package/fuzzy-search
 
 ## License
 MPL-2.0 License
