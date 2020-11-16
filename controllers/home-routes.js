@@ -4,17 +4,19 @@ const router = require('express').Router();
 router.get('/', (req, res) => {
   // ===== Need to pass a single post object into the homepage template
   // check module 14.1.6 to seed data
-  res.render('homepage');
+  res.render('homepage', {
+    loggedIn: req.session.loggedIn
+  })
 });
 
 // route to render the login page
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-  res.render('login');
+  res.render('login', {
+    loggedIn: req.session.loggedIn
+  });
 });
+
+// 14.2.6 FIX LOGOUT
 
 // route to render signup page
 router.get('/signup', (req, res) => {
@@ -38,6 +40,13 @@ router.get('/blog', (req, res) => {
 router.get('/recycle', (req, res) => {
   res.render('recycle');
   return;
+});
+
+// route to render dashboard page
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 module.exports = router;

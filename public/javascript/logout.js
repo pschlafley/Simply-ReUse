@@ -1,3 +1,4 @@
+// 14.2.6 FIX LOGOUT
 async function logout() {
     const response = await fetch('/api/users/logout', {
       method: 'post',
