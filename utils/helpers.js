@@ -1,9 +1,7 @@
 module.exports = {
     // change date to M/DD/YYYY format
     format_date: date => {
-      return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
-        date
-      ).getFullYear()}`;
+      return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(date).getFullYear()}`;
 },
 
 // change comment to plural if there is more than 1 comment
