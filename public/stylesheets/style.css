@@ -59,6 +59,7 @@ footer h5 {
     text-align: center;
     color: black;
     font-size: 25px;
+    padding-top: 100px;
 }
 
 .opening-text button {
@@ -166,6 +167,7 @@ footer h5 {
 .login-title, .signup-title {
     font-size: 20px;
     margin-left: 35px;
+    padding-top: 100px;
 }
 
 /* LOGIN AND SIGNUP STYLES END */
@@ -176,6 +178,7 @@ footer h5 {
     border-bottom: 3px solid #5ac697; 
     text-align: center;
     font-size: 25px;
+    padding-top: 100px;
 }
 
 .blog-hometitle {
