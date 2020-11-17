@@ -6,13 +6,13 @@ module.exports = {
       ).getFullYear()}`;
 },
 
-// // change comment to plural if there is more than 1 comment
-// format_plural: (word, amount) => {
-//     if (amount !== 1) {
-//       return `${word}s`;
-//     }
-//     return word;
-// }
+// change comment to plural if there is more than 1 comment
+format_plural: (word, amount) => {
+    if (amount !== 1) {
+      return `${word}s`;
+    }
+    return word;
+},
 
 // format url link with replace and split methods
 format_url: url => {
