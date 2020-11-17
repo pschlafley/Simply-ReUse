@@ -36,7 +36,8 @@ MPL-2.0 License
 Brian Spiewak, Lucianne Vazquez, Peyton Schlafley 
 
 ## Test 
-Tested applications adding console logs and using Insomnia to test the environments.
+Tested applications adding console logs and using Insomnia to test the environments. 
+Uning NPM jest to test the code, created a test and a helpers test file to test date formatting and URL formatting.  
 
 ## Questions 
 * For questions, contact me at: lucianne21@comcast.net
