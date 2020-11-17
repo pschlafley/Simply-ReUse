@@ -1,12 +1,47 @@
 const router = require('express').Router();
 
-// route to render the homepage
+// // route to render the homepage
+// router.get('/', (req, res) => {
+//   res.render('homepage', {
+//     loggedIn: req.session.loggedIn
+//   })
+// });
+
+// route to render homepage and place single post in blog section using req.session
 router.get('/', (req, res) => {
-  // ===== Need to pass a single post object into the homepage template
-  res.render('homepage', {
+  const post = {
+    id: 1,
+    title: 'Title of Test Blog Post',
+    content: 'Test content',
+    created_at: new Date(),
+    comments: [{}, {}],
+    user: {
+      username: 'User1'
+    }
+  };
+
+  res.render('homepage', { 
+    post,
     loggedIn: req.session.loggedIn
-  })
+   });
 });
+
+// single post render on blog page (=======CHANGE TO 14.3.3 code after it works)
+router.get('/blog', (req, res) => {
+  const post = {
+    id: 1,
+    title: 'Title of Test Blog Post',
+    content: 'Test content',
+    created_at: new Date(),
+    comments: [{}, {}],
+    user: {
+      username: 'User1'
+    }
+  };
+
+  res.render('blog', { post });
+});
+
 
 // route to render the login page
 router.get('/login', (req, res) => {
