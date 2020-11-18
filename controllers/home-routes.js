@@ -26,16 +26,16 @@ router.get('/', (req, res) => {
   ]
 })
 .then(dbPostData => {
-  if (!dbPostData) {
-    res.status(404).json({ message: 'No post found with this id' });
-    return;
-  }
+  // if (!dbPostData) {
+  //   res.status(404).json({ message: 'No post found with this id' });
+  //   return;
+  // }
 
   // serialize the data
-  const post = dbPostData.get({ plain: true });
+  //const post = dbPostData.get({ plain: true });
 
   res.render('homepage', { 
-    post,
+    //post,
     loggedIn: req.session.loggedIn
     });
   })
