@@ -26,9 +26,24 @@ npm i
 ### Credits
 Team: Brian Spiewak, Lucianne Vazquez, Peyton Schlafley 
 References/Resources: 
-Module 13: Object Relational Mapping (ORM) Module 14 Model-View-Controller (MVC) NPM connect session sequelize, https://www.npmjs.com/package/connect-session-sequelize sequelize Model Basics, https://sequelize.org/master/manual/model-basics.html sequelize basics, https://sequelize.org/v5/manual/querying.html#basics sequelize getting started, https://sequelize.org/v5/manual/getting-started.html sequelize doc's, https://www.npmjs.com/package/sequelize NPM Express, https://www.npmjs.com/package/express-session NPM bcrypt, https://www.npmjs.com/package/bcrypt dotenv , https://www.npmjs.com/package/dotenv SQL DEFAULT Constraint, W3Schools, https://www.w3schools.com/sql/sql_default.asp npm inquirer package, https://www.npmjs.com/package/inquirer mySQL2, https://www.npmjs.com/package/mysql2 NPM express-handlebars, https://www.npmjs.com/package/express-handlebars Node.js mySQL Where, https://www.w3schools.com/nodejs/nodejs_mysql_where.asp timeout, https://stackoverflow.com/questions/57120577/how-to-set-query-timeout-in-sequelize & https://stackoverflow.com/questions/50094169/redirect-to-login-page-after-session-timeout-using-nodejs-expressjs-and-reactjs
-NPM Fuzzy search, https://www.npmjs.com/package/fuzzy-search
-CSS, https://stackoverflow.com/questions/6786511/how-to-fix-a-div-to-top-of-page-with-css-only
+Module 13: Object Relational Mapping (ORM)
+Module 14 Model-View-Controller (MVC) <br>
+* NPM connect session sequelize, https://www.npmjs.com/package/connect-session-sequelize <br>
+* Sequelize Model Basics, https://sequelize.org/master/manual/model-basics.html <br>
+* Sequelize basics, https://sequelize.org/v5/manual/querying.html#basics <br>
+* Sequelize getting started, https://sequelize.org/v5/manual/getting-started.html <br> 
+* Sequelize doc's, https://www.npmjs.com/package/sequelize <br>
+* NPM Express, https://www.npmjs.com/package/express-session <br> 
+* NPM bcrypt, https://www.npmjs.com/package/bcrypt <br> 
+* dotenv, https://www.npmjs.com/package/dotenv <br> 
+* SQL DEFAULT Constraint, W3Schools, https://www.w3schools.com/sql/sql_default.asp <br> 
+* npm inquirer package, https://www.npmjs.com/package/inquirer <br> 
+* mySQL2, https://www.npmjs.com/package/mysql2 <br> 
+* NPM express-handlebars, https://www.npmjs.com/package/express-handlebars <br> 
+* Node.js mySQL Where, https://www.w3schools.com/nodejs/nodejs_mysql_where.asp <br> 
+* timeout, https://stackoverflow.com/questions/57120577/how-to-set-query-timeout-in-sequelize & https://stackoverflow.com/questions/50094169/redirect-to-login-page-after-session-timeout-using-nodejs-expressjs-and-reactjs
+* NPM Fuzzy search, https://www.npmjs.com/package/fuzzy-search <br> 
+* CSS, https://stackoverflow.com/questions/6786511/how-to-fix-a-div-to-top-of-page-with-css-only
 
 ### License
 ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg) <br>
@@ -45,4 +60,3 @@ Used jest to test the code, created a test and a helpers test file to test date 
 * For questions, contact any team member using the following email addresses: <br> lucianne21@comcast.net, bspiewak6@gmail.com or pschlafley0@gmail.com
 * GitHub Usernames: bspiewak6, Lucianne302 and PSchlafley
 * Repository Link: https://github.com/pschlafley/Simply-ReUse.git 
-* Video: 
