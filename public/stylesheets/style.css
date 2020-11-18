@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, Times, 'Times New Roman', serif, Helvetica, sans-serif;
+}
+
+header {
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 9999; /* Stay on top of content on site */
+}
+
+header h2 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 36px;
+    color: #f9b134;
+    /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+main {
+    padding-bottom: 125px;
+}
+
+footer {
+    background: black;
+    width: 100%;
+    padding: 40px 35px;
+    bottom: 0;
+}
+
+footer h5 {
+    color:  white;
+    font-size: 20px;
+    margin: 0;
+}
+  
+.hero {
+    margin-bottom: 80px;
+}
+
+.hero-image img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.opening-text {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    padding-top: 100px;
+}
+
+.opening-text button {
+    border: none;
+    margin: 10px;
+    padding: 15px 20px;
+    background-color: black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.opening-text button a, .blog-posts button a{
+    color: white;
+    text-decoration: none;
+}
+
+.opening-text button:hover, .blog-posts button:hover {
+    background-color: #5ac697;
+    color: black;
+}
+
+.blog-posts {
+    margin: 10px 25px;
+}
+
+.blog-posts button {
+    border: none;
+    margin: 10px;
+    padding: 15px 20px;
+    background-color: black;
+    border-radius: 15px;
+    cursor: pointer; 
+}
+
+/* SIDE NAV STYLE*/
+.sidenav {
+    height: 100%;
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    top: 0; /* Stay at the top of the screen */
+    right: 0; 
+    background-color: #f9b134;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 8px 8px 8px 32px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-left: 1.5px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.btn-no-style:hover {
+    background: none;
+    color: white;
+}
+
+/* SIDE NAV END */
+
+/* LOGIN AND SIGNUP STYLES */
+
+.btn-login, .btn-signup {
+    border: none;
+    padding: 10px 10px;
+    margin: 10px auto auto 35px;
+    background-color: black;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+#userlog, #pwlog, #usersign, #emailsign, #pwsign {
+    margin-left: 35px;
+}
+
+.login-title, .signup-title {
+    font-size: 20px;
+    margin-left: 35px;
+    padding-top: 100px;
+}
+
+/* LOGIN AND SIGNUP STYLES END */
+
+
+/* BLOG PAGE */ /* ABOUT PAGE */ /* RECYCLE PAGE */
+.blog-title, .about-title, .recycle-title {
+    border-bottom: 3px solid #5ac697; 
+    text-align: center;
+    font-size: 25px;
+    padding-top: 100px;
+}
+
+.blog-hometitle {
+    background-color: #5ac697; 
+    text-align: center;
+    font-size: 25px;
+}
+
+.recycle101, .recycle101 li{
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.recycle-source {
+    margin-top: 35px;
+    border-top: 2px solid lightgrey;
+    width: 50%;
+    font-size: 14px;
+}
+
+.recycle-source a {
+    color: black;
+}
+
+/* SIDE NAV MEDIA QUERY */
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.card {
+    margin: 15px 30px;
+}
+
+
+/* LEFT IN AS PLACEHOLDER */
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {}
+
+/*MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {}
+
+/*MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {}
