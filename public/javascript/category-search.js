@@ -1,3 +1,5 @@
+const Category = require('../../models/Category');
+
 async function categorySearch(event) {
     event.preventDefault();
   
@@ -14,6 +16,6 @@ async function categorySearch(event) {
     } else {
     alert(response.statusText);
     }
-}
+};
   
 document.querySelector('.category-form').addEventListener('submit', categorySearch);
