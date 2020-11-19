@@ -1,26 +1,30 @@
-<div>
+<div class="card mb-3" style="max-width: auto; border: none">
     <div class="search-title">
     <p><strong>Search For Items to Recycle</strong></p>
     </div>
-   
-    <form class="category-form">
-        <div>
-            <label for="category-text" id="category-search">Category:</label>
-            <input type="text" id="category-text" />
+    <div class="row no-gutters">
+        <div class="col-md-5">
+        <form class="category-form">
+                <div>
+                    <label for="category-text" id="category-search">Category:</label>
+                    <input type="text" id="category-text" />
+                </div>
+                <div>
+                    <button type="submit" class="btn-signup">Search</button>
+                </div>
+            </form>
         </div>
-        <div>
-            <button type="submit" class="btn-signup">Search</button>
+        <div class="col-md-5">
+            <div class="card-body">
+                <p class="card-text">{{items.item_name}}</p>
+            </div>
         </div>
-    </form>
-</div>
-
-<div>
-    
-</div>
+    </div>
 
 <div class="recycle-title">
     <p><strong>Recycling 101</strong></p>
 </div>
+
     <div class="recycle101">
     <p>
         <strong>Did you know that some organic matter like leaves can take up to a year to decompose? </strong>
