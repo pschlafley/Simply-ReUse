@@ -19,37 +19,10 @@ router.get('/', (req, res) => {
     })
 });
 
-// router.get('/:id', (req, res) => {
-//     Category.findOne({
-//         where: {
-//             id: req.params.id
-//         },
-//         attributes: [
-//             'id',
-//             'category_name'
-//         ],
-//         include: [{
-//             model: Items,
-//             attributes: ['item_name']
-//         }]
-//     })
-//     .then(dbCategoryData => {
-//         if(!dbCategoryData){
-//             res.status(404).json({ message: 'No Category found with that id' });
-//             return;
-//         }
-//         res.json(dbCategoryData)
-//     })
-//     .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//     })
-// });
-
-router.get('/:category', (req, res) => {
+router.get('/:categories', (req, res) => {
     Category.findOne({
         where: {
-            category_name: req.params.category
+            category_name: req.params.categories
         },
         attributes: [
             'id',
@@ -61,6 +34,7 @@ router.get('/:category', (req, res) => {
         }]
     })
     .then(dbCategoryData => {
+        console.log(dbCategoryData);
         res.json(dbCategoryData)
     })
     .catch(err => {
