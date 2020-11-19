@@ -8,12 +8,16 @@ async function categorySearch(event) {
     headers: { 'Content-Type': 'application/json' }
     });
 
-    // check the response status
     if (response.ok) {
-    console.log(`${category}`);
-    } else {
-    alert(response.statusText);
-    }
-}
-  
+        response.json().then(data => {
+            for (let i = 0; i < data.items.length; i++) {
+                const item = data.items[i];
+                console.log(data.items[i]);
+                // need to append the item to page in the list from recycle.handlebars
+                $("#category-items").append(item);
+            }
+        });
+    };    
+};
+
 document.querySelector('.category-form').addEventListener('submit', categorySearch);
