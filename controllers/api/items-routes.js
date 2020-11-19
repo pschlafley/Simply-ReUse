@@ -8,14 +8,14 @@ router.get('/', (req, res) => {
             'item_name',
             'category_id'
         ],
-        // include: [
-        //     {
-        //         model: Category,
-        //         attributes: [
-        //             'category_name'
-        //         ]
-        //     }
-        // ]
+        include: [
+            {
+                model: Category,
+                attributes: [
+                    'category_name'
+                ]
+            }
+        ]
     })   
     .then(dbItemsData => res.json(dbItemsData))
     .catch(err => {

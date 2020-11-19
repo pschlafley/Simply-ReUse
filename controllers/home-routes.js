@@ -98,11 +98,4 @@ router.get('/recycle', (req, res) => {
   });
 });
 
-// route to render dashboard page
-// router.get('/dashboard', (req, res) => {
-//   res.render('dashboard', {
-//     loggedIn: req.session.loggedIn
-//   });
-// });
-
 module.exports = router;

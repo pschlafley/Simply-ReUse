@@ -62,14 +62,14 @@ User.hasMany(Comment, {
 //     foreignKey: 'user_id'
 // });
 
-// Category.belongsTo(Items, {
-//     foreignKey: 'category_id',
-//     onDelete: 'CASCADE'
-// });
+Items.belongsTo(Category, {
+    foreignKey: 'category_id',
+    onDelete: 'CASCADE'
+});
 
 Category.hasMany(Items, {
     foreignKey: 'category_id',
     onDelete: 'CASCADE'
-})
+});
 
 module.exports = { User, Post, Comment, Like, Items, Category };
