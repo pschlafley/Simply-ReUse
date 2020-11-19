@@ -210,6 +210,11 @@ footer h5 {
     color: black;
 }
 
+#category-items {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
 /* SIDE NAV MEDIA QUERY */
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
