@@ -161,7 +161,7 @@ footer h5 {
     color: white;
 }
 
-#userlog, #pwlog, #usersign, #emailsign, #pwsign {
+#userlog, #pwlog, #usersign, #emailsign, #pwsign, #category-search {
     margin-left: 35px;
 }
 
@@ -175,7 +175,7 @@ footer h5 {
 
 
 /* BLOG PAGE */ /* ABOUT PAGE */ /* RECYCLE PAGE */
-.blog-title, .about-title, .recycle-title {
+.blog-title, .about-title, .recycle-title, .search-title {
     border-bottom: 3px solid #5ac697; 
     text-align: center;
     font-size: 25px;
@@ -188,9 +188,15 @@ footer h5 {
     font-size: 25px;
 }
 
-.recycle101, .recycle101 li{
+.recycle101, .recycle101 li {
     margin-top: 20px;
     margin-left: 35px;
+}
+
+.category-form {
+    margin-left: 10px;
+    padding-top: 50px;
+    padding-bottom: 150px;
 }
 
 .recycle-source {
@@ -202,6 +208,11 @@ footer h5 {
 
 .recycle-source a {
     color: black;
+}
+
+#category-items {
+    margin-top: 25px;
+    font-weight: bold;
 }
 
 /* SIDE NAV MEDIA QUERY */
