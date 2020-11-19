@@ -11,7 +11,7 @@ async function categorySearch(event) {
     if (response.ok) {
         response.json().then(data => {
             for (let i = 0; i < data.items.length; i++) {
-                const item = data.items[i];
+                let item  = '<li>' + data.items[i].item_name + '</li>'
                 console.log(data.items[i]);
                 // need to append the item to page in the list from recycle.handlebars
                 $("#category-items").append(item);
