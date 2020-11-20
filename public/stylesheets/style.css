@@ -83,12 +83,13 @@ footer h5 {
 }
 
 .blog-posts {
-    margin: 10px 25px;
+    float: right;
+    font-size: 16px;
 }
 
 .blog-posts button {
     border: none;
-    margin: 10px;
+    margin-right: 45px;
     padding: 15px 20px;
     background-color: black;
     border-radius: 15px;
