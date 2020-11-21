@@ -60,7 +60,6 @@ const fuzzySearch = function(pattern) {
         ]
     };
     const fuse = new Fuse(categoryData, options);
-    // const pattern = '';
     return fuse.search(pattern);
 };  
 
