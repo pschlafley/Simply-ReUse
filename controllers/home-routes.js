@@ -49,4 +49,10 @@ router.get('/recycle', (req, res) => {
   });
 });
 
+router.get('/profile', (req, res) => {
+  res.render('profile', {
+    loggedIn: req.session.loggedIn
+  });
+});
+
 module.exports = router;

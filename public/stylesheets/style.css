@@ -162,7 +162,7 @@ footer h5 {
     color: white;
 }
 
-#userlog, #pwlog, #usersign, #emailsign, #pwsign, #category-search {
+#userlog, #pwlog, #usersign, #emailsign, #pwsign, #category-search, #username, #email, #password {
     margin-left: 35px;
 }
 
@@ -194,7 +194,7 @@ footer h5 {
     margin-left: 35px;
 }
 
-.category-form {
+.category-form, .username-form, .email-form, .password-form {
     margin-left: 10px;
     padding-top: 50px;
     padding-bottom: 150px;
