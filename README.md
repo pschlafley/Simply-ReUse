@@ -10,18 +10,16 @@
 * [Tests](#tests) 
 * [Questions](#questions) 
 
-
 ### Description 
 Simply ReUse is an app that targets users who want to learn more about recycling
 Key features include: 
-* View blog posts about the Recycling
-* Create a profile to share ideas, post, edit and delete their own comments
-* View current environment news articles from the NY Times
-* Location search feature to find recycling centers in their area
-
+* View blog posts about Recycling
+* Create a user login to share ideas, post, edit and delete their own comments
+* View current environment news articles
+* Search recycling categories for items that are recyclable 
 
 ### Installation
-npm i 
+Start by doing an "npm i" in your terminal followed by creating a .env file with the database name, username and password
 
 ### Credits
 Team: Brian Spiewak, Lucianne Vazquez, Peyton Schlafley 
@@ -53,10 +51,11 @@ This app is licensed under the Mozilla Public License 2.0.
 Brian Spiewak, Lucianne Vazquez, Peyton Schlafley 
 
 ### Tests 
-Tested applications adding console logs and using Insomnia to test the environments. 
-Used jest to test the code, created a test and a helpers test file to test date formatting and URL formatting.  
+Tested applications adding console logs and using Insomnia Core to test the environments. 
+Used jest to test the code, created a test and a helpers test file to test date formatting, plurals and URLs. 
 
 ### Questions 
 * For questions, contact any team member using the following email addresses: <br> lucianne21@comcast.net, bspiewak6@gmail.com or pschlafley0@gmail.com
 * GitHub Usernames: bspiewak6, Lucianne302 and PSchlafley
-* Repository Link: https://github.com/pschlafley/Simply-ReUse.git 
+* Heroku Deployed App Link: https://simplyreuse.herokuapp.com/
+* Repository Link: https://github.com/pschlafley/Simply-ReUse
