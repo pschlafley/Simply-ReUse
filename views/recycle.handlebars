@@ -1,8 +1,31 @@
+<div class="card mb-3" style="max-width: auto; border: none">
+    <div class="search-title">
+    <p><strong>Search For Items To Recycle</strong></p>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-md-5">
+        <form class="category-form">
+                <div>
+                    <label for="category-text" id="category-search"><strong>Category:</strong></label>
+                    <input type="text" id="category-text" />
+                </div>
+                <div>
+                    <button type="submit" class="btn-signup">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <div class="card-body" id="category-items-wrapper">
+                <ul class="card-text" id="category-items"></ul>
+            </div>
+        </div>
+    </div>
+
 <div class="recycle-title">
     <p><strong>Recycling 101</strong></p>
 </div>
 
-<div class="recycle101">
+    <div class="recycle101">
     <p>
         <strong>Did you know that some organic matter like leaves can take up to a year to decompose? </strong>
         <br>
@@ -15,10 +38,10 @@
         <li>Plastic water bottles can take 500 years<sup>1</sup></li>
         <li>Glass bottles take 4,000 years<sup>1</sup></li>
         <li>Aluminum cans take 80-200 years<sup>2</sup></li>
-    <li>Disposable diapers take approximately 250-500 years<sup>2</sup></li>
-    <li>Shoes up to 80 years<sup>2</sup></li>
-    <li>Nylon fabric up to 40 years<sup>2</sup></li>
-</ul>
+        <li>Disposable diapers take approximately 250-500 years<sup>2</sup></li>
+        <li>Shoes up to 80 years<sup>2</sup></li>
+        <li>Nylon fabric up to 40 years<sup>2</sup></li>
+    </ul>
 
     <p class="recycle-source">Sources: <br>
     <sup>1</sup>
@@ -28,3 +51,5 @@
         <a href="https://www.thebalancesmb.com/how-long-does-it-take-garbage-to-decompose-2878033" target=_blank>https://www.thebalancesmb.com/how-long-does-it-take-garbage-to-decompose-2878033</a>
     </p>
 </div>
+
+<script src="/javascript/category-search.js"></script>
