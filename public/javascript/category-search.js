@@ -1,3 +1,27 @@
+const searcher = new FuzzySearch(<haystack>, [keys], [options]);
+const result = searcher.search(<needle>);
+
+// This can be excluded when loaded via <script>
+import FuzzySearch from 'fuzzy-search'; // Or: var FuzzySearch = require('fuzzy-search');
+
+const cat = [{
+  category-text: { }
+
+{/* const people = [{
+  name: {
+    firstName: 'Jesse',
+    lastName: 'Bowen',
+  },
+  state: 'Seattle', */}
+}];
+ 
+{/* const searcher = new FuzzySearch(people, ['name.firstName', 'state'], { */}
+const searcher = new FuzzySearch(categories, ['categories.categorySearch'], {
+  caseSensitive: true,
+});
+const result = searcher.search('ess');
+
+
 async function categorySearch(event) {
     event.preventDefault();
   
