@@ -97,9 +97,8 @@ router.get('/:categories', (req, res) => {
             attributes: ['item_name']
         }]
     })
-    .then(dbCategoryData => {
-        console.log(dbCategoryData);
-        res.json(dbCategoryData)
+    .then(dbCategoryData => {        
+      res.json(dbCategoryData)
     })
     .catch(err => {
         console.log(err);
