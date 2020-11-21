@@ -98,7 +98,6 @@ router.get('/:categories', (req, res) => {
         }]
     })
     .then(dbCategoryData => {
-        console.log(dbCategoryData);
         res.json(dbCategoryData)
     })
     .catch(err => {
