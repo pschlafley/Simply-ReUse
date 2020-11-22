@@ -64,9 +64,11 @@
    
     <div class="blog-posts">
         <div class="card mb-3" style="max-width: 650px; border:none;">
+        {{#if loggedIn}}
         <button><a href="/blog">View All Blog Posts &nbsp;
         <i class="far fa-arrow-alt-circle-right"></i></a>
         </button>
+        {{/if}}
         </div>
     </div>
 </div>
