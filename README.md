@@ -14,7 +14,7 @@
 ### Description 
 Simply ReUse is an app that targets users who want to learn more about recycling
 Key features include: 
-* ???Users can create a login to explore blog posts as well as functionality to update credentials????
+* Users can create a login to explore blog posts as well as functionality to update their password
 * Learn more about recycling and the ways to make our planet better for future generations
 * Search categories for items that are recyclable 
 
