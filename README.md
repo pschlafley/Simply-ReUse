@@ -1,8 +1,9 @@
-# Simply-ReUse
+# Simply ReUse
 ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
 
 ## Table of Contents
 * [Description](#description)
+* [Screenshots](#screenshots)
 * [Installation](#installation)
 * [Credits](#credits)
 * [License](#license)
@@ -10,21 +11,30 @@
 * [Tests](#tests) 
 * [Questions](#questions) 
 
-
 ### Description 
 Simply ReUse is an app that targets users who want to learn more about recycling
 Key features include: 
-* View blog posts about the Recycling
-* Create a profile to share ideas, post, edit and delete their own comments
-* View current environment news articles from the NY Times
-* Location search feature to find recycling centers in their area
+* Users can create a login to explore blog posts as well as functionality to update their password
+* Learn more about recycling and the ways to make our planet better for future generations
+* Search categories for items that are recyclable 
 
+### Screenshots
+##### Homepage
+![Screenshots](./public/assets/homepage_screen_withoutnav.png)
+##### Homepage with NAV sidebar open
+![Screenshots](./public/assets/homepage_screen_withnav.png)
+##### Homepage Blog Posts
+![Screenshots](./public/assets/homepage_blog.png)
+##### Blog Page
+![Screenshots](./public/assets/blogpage.png)
+##### Recycle Page
+![Screenshots](./public/assets/recyclepage.png)
 
 ### Installation
-npm i 
+Start by running an "npm i" in your terminal followed by creating a .env file with the database name, username and password
 
 ### Credits
-Team: Brian Spiewak, Lucianne Vazquez, Peyton Schlafley 
+Team: Brian Spiewak, Lucianne Vazquez & Peyton Schlafley 
 References/Resources: 
 Module 13: Object Relational Mapping (ORM)
 Module 14 Model-View-Controller (MVC) <br>
@@ -50,13 +60,14 @@ Module 14 Model-View-Controller (MVC) <br>
 This app is licensed under the Mozilla Public License 2.0.
 
 ### Contributors
-Brian Spiewak, Lucianne Vazquez, Peyton Schlafley 
+Brian Spiewak, Lucianne Vazquez & Peyton Schlafley 
 
 ### Tests 
-Tested applications adding console logs and using Insomnia to test the environments. 
-Used jest to test the code, created a test and a helpers test file to test date formatting and URL formatting.  
+Tested application using test-driven development (TDD) and Insomnia Core. 
+Used jest to test the code and a helpers test file to test date, plurals and URL formatting. 
 
 ### Questions 
-* For questions, contact any team member using the following email addresses: <br> lucianne21@comcast.net, bspiewak6@gmail.com or pschlafley0@gmail.com
+* For questions, contact any team member using the following email addresses: <br> bspiewak6@gmail.com, lucianne21@comcast.net, pschlafley0@gmail.com
 * GitHub Usernames: bspiewak6, Lucianne302 and PSchlafley
-* Repository Link: https://github.com/pschlafley/Simply-ReUse.git 
+* Heroku Deployed App Link: https://simplyreuse3.herokuapp.com/
+* Repository Link: https://github.com/pschlafley/Simply-ReUse
