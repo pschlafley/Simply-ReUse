@@ -35,11 +35,10 @@ main {
 
 footer {
     background: black;
-    padding: 40px 35px;
-    /* margin-top: -200px; */
-    margin-bottom: 0px;
-    height: 150px;
-    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding: 1%;
+    font-size: 110%;
 }
 
 footer h5 {
