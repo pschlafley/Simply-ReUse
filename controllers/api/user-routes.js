@@ -155,7 +155,6 @@ router.post('/logout', withAuth, (req, res) => {
 // });
 
 router.put('/:username', (req, res) => {
-  console.log(req.body);
   User.update(req.body, {
     individualHooks: true,
     where: {
