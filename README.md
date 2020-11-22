@@ -1,6 +1,5 @@
 # Simply ReUse
 ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
-
 ## Table of Contents
 * [Description](#description)
 * [Screenshots](#screenshots)
@@ -10,14 +9,12 @@
 * [Contributors](#contributors)
 * [Tests](#tests) 
 * [Questions](#questions) 
-
 ### Description 
 Simply ReUse is an app that targets users who want to learn more about recycling
 Key features include: 
 * Users can create a login to explore blog posts as well as functionality to update their password
 * Learn more about recycling and the ways to make our planet better for future generations
 * Search categories for items that are recyclable 
-
 ### Screenshots
 ##### Homepage
 ![Screenshots](./public/assets/homepage_screen_withoutnav.png)
@@ -29,10 +26,8 @@ Key features include:
 ![Screenshots](./public/assets/blogpage.png)
 ##### Recycle Page
 ![Screenshots](./public/assets/recyclepage.png)
-
 ### Installation
 Start by running an "npm i" in your terminal followed by creating a .env file with the database name, username and password
-
 ### Credits
 Team: Brian Spiewak, Lucianne Vazquez & Peyton Schlafley 
 References/Resources: 
@@ -54,18 +49,14 @@ Module 14 Model-View-Controller (MVC) <br>
 * timeout, https://stackoverflow.com/questions/57120577/how-to-set-query-timeout-in-sequelize & https://stackoverflow.com/questions/50094169/redirect-to-login-page-after-session-timeout-using-nodejs-expressjs-and-reactjs
 * NPM Fuzzy search, https://www.npmjs.com/package/fuzzy-search <br> 
 * CSS, https://stackoverflow.com/questions/6786511/how-to-fix-a-div-to-top-of-page-with-css-only
-
 ### License
 ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg) <br>
 This app is licensed under the Mozilla Public License 2.0.
-
 ### Contributors
 Brian Spiewak, Lucianne Vazquez & Peyton Schlafley 
-
 ### Tests 
 Tested application using test-driven development (TDD) and Insomnia Core. 
 Used jest to test the code and a helpers test file to test date, plurals and URL formatting. 
-
 ### Questions 
 * For questions, contact any team member using the following email addresses: <br> bspiewak6@gmail.com, lucianne21@comcast.net, pschlafley0@gmail.com
 * GitHub Usernames: bspiewak6, Lucianne302 and PSchlafley

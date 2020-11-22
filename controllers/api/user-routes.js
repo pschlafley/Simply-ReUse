@@ -55,24 +55,24 @@ router.get('/:id', (req, res) => {
   });
 });
 
-router.get('/profile', (req, res) => {
-  User.findOne({
-    where: {
-      id: req.params.id
-    }
-  })
-  .then(dbUserData => {
-    // declare the session variables
-    req.session.user_id = dbUserData.id;
-    req.session.username = dbUserData.username;
+// router.get('/profile', (req, res) => {
+//   User.findOne({
+//     where: {
+//       id: req.params.id
+//     }
+//   })
+//   .then(dbUserData => {
+//     // declare the session variables
+//     req.session.user_id = dbUserData.id;
+//     req.session.username = dbUserData.username;
    
-    res.json(dbUserData);
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
-});
+//     res.json(dbUserData);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//     res.status(500).json(err);
+//   });
+// });
 
 // POST /api/users
 router.post('/', (req, res) => {
@@ -140,25 +140,25 @@ router.post('/logout', withAuth, (req, res) => {
     }
 });
 
-router.put('/:id', (req, res) => {
-  User.update(req.body, {
-      individualHooks: true,
-      where: {
-          id: req.params.id
-      }
-  })
-  .then(dbUserData => res.json(dbUserData))
-  .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-  })
-});
+// router.put('/:id', (req, res) => {
+//   User.update(req.body, {
+//       individualHooks: true,
+//       where: {
+//           id: req.params.id
+//       }
+//   })
+//   .then(dbUserData => res.json(dbUserData))
+//   .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//   })
+// });
 
-router.put('/profile/:id', (req, res) => {
+router.put('/:username', (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {
-      id: req.session.id
+      username: req.session.username
     }
   })
   .then(dbUserData => {
@@ -167,6 +167,7 @@ router.put('/profile/:id', (req, res) => {
       req.session.username = dbUserData.username;
       req.session.email = dbUserData.email;
       req.session.password = dbUserData.password;
+      req.session.loggedIn = true
     })
   })
   .catch(err => {
