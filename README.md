@@ -3,6 +3,7 @@
 
 ## Table of Contents
 * [Description](#description)
+* [Screenshots](#screenshots)
 * [Installation](#installation)
 * [Credits](#credits)
 * [License](#license)
@@ -17,6 +18,21 @@ Key features include:
 * Create a user login to share ideas, post, edit and delete their own comments
 * View current environment news articles
 * Search recycling categories for items that are recyclable 
+<<<<<<< HEAD
+=======
+
+### Screenshots
+##### Homepage
+![Screenshots](./public/assets/homepage_screen_withoutnav.png)
+##### Homepage with NAV sidebar open
+![Screenshots](./public/assets/homepage_screen_withnav.png)
+##### Homepage Blog Posts
+![Screenshots](./public/assets/homepage_blog.png)
+##### Blog Page
+![Screenshots](./public/assets/blogpage.png)
+##### Recycle Page
+![Screenshots](./public/assets/recyclepage.png)
+>>>>>>> 0871b1c78ae89534698ab10fa741a05c4eb24a17
 
 ### Installation
 Start by doing an "npm i" in your terminal followed by creating a .env file with the database name, username and password
@@ -57,5 +73,9 @@ Used jest to test the code, created a test and a helpers test file to test date 
 ### Questions 
 * For questions, contact any team member using the following email addresses: <br> lucianne21@comcast.net, bspiewak6@gmail.com or pschlafley0@gmail.com
 * GitHub Usernames: bspiewak6, Lucianne302 and PSchlafley
+<<<<<<< HEAD
 * Heroku Deployed App Link: https://simplyreuse.herokuapp.com/
+=======
+* Heroku Deployed App Link: https://simplyreuse3.herokuapp.com/
+>>>>>>> 0871b1c78ae89534698ab10fa741a05c4eb24a17
 * Repository Link: https://github.com/pschlafley/Simply-ReUse

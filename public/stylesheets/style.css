@@ -30,14 +30,15 @@ header h2 {
 }
 
 main {
-    padding-bottom: 125px;
+    padding-bottom: 300px;
 }
 
 footer {
     background: black;
-    width: 100%;
-    padding: 40px 35px;
-    bottom: 0;
+    display: flex;
+    justify-content: left;
+    padding: 1%;
+    font-size: 110%;
 }
 
 footer h5 {
@@ -216,24 +217,21 @@ footer h5 {
     font-weight: bold;
 }
 
-/* SIDE NAV MEDIA QUERY */
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+.category-title {
+    border-bottom: 2px solid black;
 }
 
 .card {
     margin: 15px 30px;
 }
 
+#category-items-wrapper {
+    width: 300px;
+}
 
-/* LEFT IN AS PLACEHOLDER */
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {}
-
-/*MEDIA QUERY FOR TABLETS AND SMALLER */
-@media screen and (max-width: 768px) {}
-
-/*MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screen and (max-width: 575px) {}
+/* SIDE NAV MEDIA QUERY */
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

@@ -35,15 +35,6 @@ User.hasMany(Comment, {
     onDelete: 'CASCADE'
 });
 
-
-// Like.belongsTo(User, {
-//     foreignKey: 'user_id'
-// });
-
-// Like.belongsTo(Post, {
-//     foreignKey: 'post_id'
-// });
-
 // User.belongsToMany(Post, {
 //     through: Like,
 //     foreignKey: 'user_id'
@@ -52,14 +43,6 @@ User.hasMany(Comment, {
 // Post.belongsToMany(User, {
 //     through: Like,
 //     foreignKey: 'post_id'
-// });
-
-// Post.hasMany(Like, {
-//     foreignKey: 'post_id'
-// });
-
-// User.hasMany(Like, {
-//     foreignKey: 'user_id'
 // });
 
 Items.belongsTo(Category, {
