@@ -5,9 +5,15 @@
 
     <div id="current-username"></div>
 
+    <span id="hidden-username">
+        <p style="text-align: center;">
+            Welcome: {{session.username}}
+        </p>
+    </span>
+
     <div>
         <h3 style="padding-top: 20px;">Edit Profile</h3>
-        <div>
+        {{!-- <div>
             <form class="username-form">
             <div>
                 <label for="edit-username" id="username"><strong>Username:</strong></label>
@@ -20,14 +26,14 @@
             </form>
             <form class="email-form">
                 <div>
-                    <label for="edit-email" id="email"><strong>Email:</strong></label>
-                    <input type="text" id="edit-email" />
+                    <label for="edit-email" id="email"><strong>Email:</strong></label> --}}
+                    {{!-- <input type="text" id="edit-email" />
 
                     <div>
                         <button type="submit" class="btn-signup">Edit</button>
                     </div>
                 </div>
-            </form>
+            </form> --}}
             <form class="password-form">
                 <div>
                     <label for="edit-password" id="password"><strong>Password:</strong></label>

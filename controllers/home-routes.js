@@ -50,7 +50,9 @@ router.get('/recycle', (req, res) => {
 });
 
 router.get('/profile', (req, res) => {
+  console.log(req.session);
   res.render('profile', {
+    session: req.session,
     loggedIn: req.session.loggedIn
   });
 });
