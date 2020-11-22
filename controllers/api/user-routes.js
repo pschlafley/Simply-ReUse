@@ -22,38 +22,57 @@ router.get('/', (req, res) => {
 
 // GET /api/users/1
 router.get('/:id', (req, res) => {
-    User.findOne({
-      attributes: { exclude: ['password'] },
-      where: {
-        id: req.params.id
+  User.findOne({
+    attributes: { exclude: ['password'] },
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Post,
+        attributes: ['id', 'title', 'content', 'created_at']
       },
-      include: [
-        {
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'created_at'],
+        include: {
           model: Post,
-          attributes: ['id', 'title', 'content', 'created_at']
-        },
-        {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'created_at'],
-          include: {
-            model: Post,
-            attributes: ['title']
-          }
-        },
-      ]
-    })
-        .then(dbUserData => {
-          if (!dbUserData) {
-            res.status(404).json({ message: 'No user found with this id' });
-            return;
-          }
-          res.json(dbUserData);
-        })
-        .catch(err => {
-          console.log(err);
-          res.status(500).json(err);
-        });
-    });
+          attributes: ['title']
+        }
+      },
+    ]
+  })
+  .then(dbUserData => {
+    if (!dbUserData) {
+      res.status(404).json({ message: 'No user found with this id' });
+      return;
+    }
+    res.json(dbUserData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+// router.get('/profile', (req, res) => {
+//   User.findOne({
+//     where: {
+//       id: req.params.id
+//     }
+//   })
+//   .then(dbUserData => {
+//     // declare the session variables
+//     req.session.user_id = dbUserData.id;
+//     req.session.username = dbUserData.username;
+   
+//     res.json(dbUserData);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//     res.status(500).json(err);
+//   });
+// });
 
 // POST /api/users
 router.post('/', (req, res) => {
@@ -121,37 +140,61 @@ router.post('/logout', withAuth, (req, res) => {
     }
 });
 
-router.put('/:id', (req, res) => {
-    User.update(req.body, {
-        individualHooks: true,
-        where: {
-            id: req.params.id
-        }
+// router.put('/:id', (req, res) => {
+//   User.update(req.body, {
+//       individualHooks: true,
+//       where: {
+//           id: req.params.id
+//       }
+//   })
+//   .then(dbUserData => res.json(dbUserData))
+//   .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//   })
+// });
+
+router.put('/:username', (req, res) => {
+  User.update(req.body, {
+    individualHooks: true,
+    where: {
+      username: req.session.username
+    }
+  })
+  .then(dbUserData => {
+    req.session.save(() => {
+      // declare the session variables
+      req.session.username = dbUserData.username;
+      req.session.email = dbUserData.email;
+      req.session.password = dbUserData.password;
+      req.session.loggedIn = true
     })
-    .then(dbUserData => res.json(dbUserData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
 });
 
+
+
 router.delete('/:id', (req, res) => {
-    User.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-    .then(dbUserData => {
-        if (!dbUserData) {
-            res.status(404).json({ message: 'No user found with this id' });
-            return;
-        }
-        res.json(dbUserData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+  User.destroy({
+      where: {
+          id: req.params.id
+      }
+  })
+  .then(dbUserData => {
+      if (!dbUserData) {
+          res.status(404).json({ message: 'No user found with this id' });
+          return;
+      }
+      res.json(dbUserData);
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
 });
 
 module.exports = router;

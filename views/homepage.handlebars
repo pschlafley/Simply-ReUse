@@ -19,7 +19,7 @@
 </div>
 
 <div class="row col-12">
-    <div class="card mb-3" style="max-width: 650px;">
+    <div class="card mb-3" style="max-width: 550px;">
         <div class="row no-gutters">
             <div class="col-md-2 col-sm-3">
                 <img src="./assets/recycle_1.png" class="card-img" alt="placeholder-img">
@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div class="card mb-3" style="max-width: 500px;">
+    <div class="card mb-3" style="max-width: 550px;">
         <div class="row no-gutters">
             <div class="col-md-2 col-sm-3">
                 <img src="./assets/recycle_2.png" class="card-img" alt="placeholder-img">
@@ -64,9 +64,11 @@
    
     <div class="blog-posts">
         <div class="card mb-3" style="max-width: 650px; border:none;">
+        {{#if loggedIn}}
         <button><a href="/blog">View All Blog Posts &nbsp;
         <i class="far fa-arrow-alt-circle-right"></i></a>
         </button>
+        {{/if}}
         </div>
     </div>
 </div>

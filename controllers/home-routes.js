@@ -1,14 +1,14 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 
-// route to render homepage and place single posts in blog section using req.session
+// route to render homepage 
 router.get('/', (req, res) => {
   res.render('homepage', { 
     loggedIn: req.session.loggedIn
    });
 });
 
-// single post render on blog page
+// route to render blog page
 router.get('/blog', (req, res) => {
   res.render('blog', { 
     loggedIn: req.session.loggedIn
@@ -35,16 +35,18 @@ router.get('/about', (req, res) => {
   });
 });
 
-// route to render blog page
-router.get('/blog', (req, res) => {
-  res.render('blog', {
+// route to render recycle page
+router.get('/recycle', (req, res) => {
+  res.render('recycle', {
     loggedIn: req.session.loggedIn
   });
 });
 
-// route to render recycle page
-router.get('/recycle', (req, res) => {
-  res.render('recycle', {
+// route to render profile page and send session data for the user to be able to update their password
+router.get('/profile', (req, res) => {
+  console.log(req.session);
+  res.render('profile', {
+    session: req.session,
     loggedIn: req.session.loggedIn
   });
 });

@@ -30,14 +30,16 @@ header h2 {
 }
 
 main {
-    padding-bottom: 125px;
+    padding-bottom: 300px;
 }
 
 footer {
     background: black;
-    width: 100%;
     padding: 40px 35px;
-    bottom: 0;
+    /* margin-top: -200px; */
+    margin-bottom: 0px;
+    height: 150px;
+    width: 100%;
 }
 
 footer h5 {
@@ -162,7 +164,7 @@ footer h5 {
     color: white;
 }
 
-#userlog, #pwlog, #usersign, #emailsign, #pwsign, #category-search {
+#userlog, #pwlog, #usersign, #emailsign, #pwsign, #category-search, #username, #email, #password {
     margin-left: 35px;
 }
 
@@ -194,7 +196,7 @@ footer h5 {
     margin-left: 35px;
 }
 
-.category-form {
+.category-form, .username-form, .email-form, .password-form {
     margin-left: 10px;
     padding-top: 50px;
     padding-bottom: 150px;
@@ -216,24 +218,21 @@ footer h5 {
     font-weight: bold;
 }
 
-/* SIDE NAV MEDIA QUERY */
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+.category-title {
+    border-bottom: 2px solid black;
 }
 
 .card {
     margin: 15px 30px;
 }
 
+#category-items-wrapper {
+    width: 300px;
+}
 
-/* LEFT IN AS PLACEHOLDER */
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {}
-
-/*MEDIA QUERY FOR TABLETS AND SMALLER */
-@media screen and (max-width: 768px) {}
-
-/*MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screen and (max-width: 575px) {}
+/* SIDE NAV MEDIA QUERY */
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

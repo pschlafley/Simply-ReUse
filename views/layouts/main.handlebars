@@ -17,10 +17,13 @@
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="/">Home</a>
-            <a href="/blog">Blog</a>
+            {{#if loggedIn}}
+              <a href="/profile">Profile</a>
+            {{/if}}
             <a href="/recycle">Recycle</a>
             <a href="/about">About</a>
             {{#if loggedIn}}
+            <a href="/blog">Blog</a>
             <button id="logout" class="btn-no-style">Logout</button>
             {{else}}
             <a href="/login">Login</a>
